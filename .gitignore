@@ -8,3 +8,4 @@ en.openfoodfacts.org.products.csv
 .vscode
 .coverage
 /data/
+/mlruns/
