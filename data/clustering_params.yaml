@@ -33,7 +33,26 @@ plotting:
   figsize: [10, 6]
   cmap: 'viridis'
   
+  # Feature relationships plot
+  feature_relationships:
+    alpha: 0.5
+    point_size: 20
+    n_features: 5  # Set to null to plot all features
+  
   # Plot titles
   title: "Clustering Results"
   elbow_title: "Elbow Method For Optimal k"
-  size_title: "Cluster Size Distribution" 
+  size_title: "Cluster Size Distribution"
+
+  # Add this section to clustering_params.yaml
+
+umap:
+  # UMAP parameters
+  n_neighbors: 15
+  min_dist: 0.1
+  n_components: 2
+  random_state: 42
+  metric: 'euclidean'
+  
+  # Data preprocessing
+  scale_data: true
