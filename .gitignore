@@ -9,3 +9,4 @@ en.openfoodfacts.org.products.csv
 .coverage
 /data/en.*
 /mlruns/
+/models/
