@@ -7,5 +7,5 @@ en.openfoodfacts.org.products.csv
 .idea
 .vscode
 .coverage
-/data/
+/data/en.*
 /mlruns/
