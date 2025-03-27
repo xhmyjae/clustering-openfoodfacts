@@ -19,6 +19,8 @@ def clean(df: pd.DataFrame, irrelevant_columns: [str] = None, missing_threshold:
     Return :
     pd.DataFrame -> Cleaned DataFrame
     """
+    # Drop irrelevant columns
+    df = df.drop(columns=irrelevant_columns)
 
     # Drop columns with a proportion of missing values above the threshold
     missing_values = df.isnull().mean()
@@ -27,8 +29,5 @@ def clean(df: pd.DataFrame, irrelevant_columns: [str] = None, missing_threshold:
     # Drop columns containing only one unique value
     unique_values = df.nunique()
     df = df.drop(columns=unique_values[unique_values == 1].index)
-
-    # Drop irrelevant columns
-    df = df.drop(columns=irrelevant_columns)
 
     return df
