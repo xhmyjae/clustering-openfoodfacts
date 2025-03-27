@@ -1,0 +1,39 @@
+kmeans:
+  # Basic clustering parameters
+  n_clusters: 3
+  init: 'k-means++'
+  n_init: 10
+  max_iter: 300
+  tol: 0.0001
+  random_state: 42
+  
+  # Data preprocessing
+  scale_data: true
+  
+  # Model saving parameters
+  save_model: true
+  model_name: 'kmeans_food_clusters'
+  model_dir: 'models'
+  
+  # Visualization parameters
+  plot:
+    figsize: [10, 6]
+    cmap: 'viridis'
+    title: "K-means Clustering Results"
+  
+  # Elbow method parameters
+  elbow:
+    max_clusters: 10
+    init: 'k-means++'
+    n_init: 10
+    random_state: 42 
+
+plotting:
+  # General plotting parameters
+  figsize: [10, 6]
+  cmap: 'viridis'
+  
+  # Plot titles
+  title: "Clustering Results"
+  elbow_title: "Elbow Method For Optimal k"
+  size_title: "Cluster Size Distribution" 
