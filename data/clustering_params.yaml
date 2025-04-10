@@ -56,3 +56,23 @@ umap:
   
   # Data preprocessing
   scale_data: true
+
+autoencoder:
+  # Model architecture
+  hidden_layers: [64, 32, 16]  # Sizes of hidden layers
+  encoding_dim: 2  # Dimension of the encoded space
+  
+  # Training parameters
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  
+  # Model saving
+  save_model: true
+  model_name: "autoencoder"
+  model_dir: "models"
+  
+  # Additional parameters
+  dropout_rate: 0.2
+  use_batch_norm: true
+  activation: "relu"

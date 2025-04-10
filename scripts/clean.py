@@ -19,8 +19,9 @@ def clean(df: pd.DataFrame, irrelevant_columns: [str] = None, missing_threshold:
     Return :
     pd.DataFrame -> Cleaned DataFrame
     """
-    # Drop irrelevant columns
-    df = df.drop(columns=irrelevant_columns)
+    # Drop irrelevant columns if specified
+    if irrelevant_columns is not None:
+        df = df.drop(columns=irrelevant_columns)
 
     # Drop columns with a proportion of missing values above the threshold
     missing_values = df.isnull().mean()
