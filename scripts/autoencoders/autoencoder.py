@@ -17,8 +17,8 @@ except ImportError as e:
     print(f"Error importing matplotlib: {e}")
     raise
 
-from . import plots
-from . import model_utils
+from .. import plots
+from .. import model_utils
 
 def load_params() -> Dict:
     """

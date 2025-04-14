@@ -4,8 +4,8 @@ from sklearn.preprocessing import StandardScaler
 from typing import Tuple, Optional, Dict
 import yaml
 import os
-from . import plots
-from . import model_utils
+from .. import plots
+from .. import model_utils
 
 def load_params() -> Dict:
     """
